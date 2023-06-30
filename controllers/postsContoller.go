@@ -9,7 +9,7 @@ import (
 func PostCreate(c *gin.Context) {
 	// Get data off req body
 	var body struct {
-		Body string
+		Body  string
 		Title string
 	}
 
@@ -45,7 +45,7 @@ func PostIndex(c *gin.Context) {
 func PostShow(c *gin.Context) {
 	// get id off url
 	id := c.Param("id")
-	
+
 	// Get the post
 	var post models.Post
 	initializers.DB.First(&post, id)
